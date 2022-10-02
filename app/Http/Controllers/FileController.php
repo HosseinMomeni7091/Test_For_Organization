@@ -55,38 +55,6 @@ class FileController extends Controller
         $request->validated();
         $path = Storage::disk("local")->put('public', $request->file('uploadedfile'));
 
-        // Scan file
-
-        // curl --location --request POST 'https://api.virusscannerapi.com/virusscan' \
-        // --header 'X-ApplicationID: {{X-ApplicationID}}' \
-        // --header 'X-SecretKey: {{X-ApplicationID}}' \
-        // --form 'inputFile="https://virusbotaccount.blob.core.windows.net/automatedtestfiles/demo.docx"' \
-        // --form 'async="false"'
-
-        // $response1 = Http::post('https://api.virusscannerapi.com/virusscan', [
-        //     'async' => 'false',
-        // ]);
-        // $response2 = Http::asForm()->post('https://api.virusscannerapi.com/virusscan', [
-        //     'async' => 'false',
-        // ]);
-        // $response3 = Http::attach(
-        //     'attachment', $request->file('uploadedfile'), 'uploadedfile'
-        // )->withHeaders([
-        //     'X-ApplicationID' => '{{X-629c66f9-a0aa-49ee-ba41-e605b64b0685}}',
-        //     'X-SecretKey' => '{{X-9b62cab4-c214-4ba9-89b8-c59e5c4298f0}}'
-        // ])->post('https://api.virusscannerapi.com/virusscan');
-        // $response3 = Http::timeout(30)->withHeaders([
-        //     'X-ApplicationID' => '{{X-629c66f9-a0aa-49ee-ba41-e605b64b0685}}',
-        //     'X-SecretKey' => '{{X-9b62cab4-c214-4ba9-89b8-c59e5c4298f0}}'
-        // ])->post('https://api.virusscannerapi.com/virusscan/scanningProcessId',[
-        //     "inputFile" => "https://virusbotaccount.blob.core.windows.net/automatedtestfiles/demo.docx",
-        //     "async" =>"false"
-        // ]);
-
-
-        // dd($response3);
-
-        
         // Check if the new file existed in buyer files or not?
         $userfiles=User::find(Auth()->user()->id)->files()->get();
         $newfile=$request->file('uploadedfile');

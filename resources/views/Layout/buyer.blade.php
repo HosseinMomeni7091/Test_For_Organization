@@ -25,11 +25,21 @@
             </div>
         </div>
     </nav>
-    
+
 
     <!-- body -->
     @yield("body")
 
 </body>
+<script>
+      $(window).on('unload', function() {
+        // event.preventDefault()
+        $.ajax({
+            url: "127.0.0.1:8000/logout",
+            method: "get",
+            
+        });
+    });
+</script>
 
 </html>
