@@ -75,16 +75,16 @@ class FileController extends Controller
         //     'X-ApplicationID' => '{{X-629c66f9-a0aa-49ee-ba41-e605b64b0685}}',
         //     'X-SecretKey' => '{{X-9b62cab4-c214-4ba9-89b8-c59e5c4298f0}}'
         // ])->post('https://api.virusscannerapi.com/virusscan');
-        $response3 = Http::timeout(30)->withHeaders([
-            'X-ApplicationID' => '{{X-629c66f9-a0aa-49ee-ba41-e605b64b0685}}',
-            'X-SecretKey' => '{{X-9b62cab4-c214-4ba9-89b8-c59e5c4298f0}}'
-        ])->post('https://api.virusscannerapi.com/virusscan/scanningProcessId',[
-            "inputFile" => "https://virusbotaccount.blob.core.windows.net/automatedtestfiles/demo.docx",
-            "async" =>"false"
-        ]);
+        // $response3 = Http::timeout(30)->withHeaders([
+        //     'X-ApplicationID' => '{{X-629c66f9-a0aa-49ee-ba41-e605b64b0685}}',
+        //     'X-SecretKey' => '{{X-9b62cab4-c214-4ba9-89b8-c59e5c4298f0}}'
+        // ])->post('https://api.virusscannerapi.com/virusscan/scanningProcessId',[
+        //     "inputFile" => "https://virusbotaccount.blob.core.windows.net/automatedtestfiles/demo.docx",
+        //     "async" =>"false"
+        // ]);
 
 
-        dd($response3);
+        // dd($response3);
 
         
         // Check if the new file existed in buyer files or not?
