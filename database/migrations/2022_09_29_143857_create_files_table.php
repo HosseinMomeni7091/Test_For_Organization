@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("path");
             $table->string("name")->default("Undefined");
             $table->string("size");
+            $table->string("hashedfile");
             $table->timestamps();
         });
     }

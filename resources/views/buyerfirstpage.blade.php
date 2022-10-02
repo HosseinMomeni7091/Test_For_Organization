@@ -23,6 +23,7 @@
     <p class="text-red-600 text-medium font-medium">@if($count>=4)
      You already uploaded 4 files and there are not allowed to upload anymore.
     @endif</p>
+    <p class="text-red-600 text-medium font-medium">Result of check of Duplication : {{$resultOfCheck["duplicate"]??""}}</p>
     
 </form>
 

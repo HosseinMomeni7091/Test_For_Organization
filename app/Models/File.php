@@ -14,8 +14,10 @@ class File extends Model
         "name",
         "path",
         "size",
-        "user_id"
+        "user_id",
+        "hashedfile"
     ];
+    
 
     public function user() {
     return $this->belongsTo(User::class);
