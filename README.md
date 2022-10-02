@@ -8,17 +8,11 @@
 </p>
 
 
-## Start with this code
-
-#npm i 
-#php artisan key:generate
-#php artisan storage:link
-#php artisan migrate --seed
 
 ## About this code
 
 admin was defined as below:
-email:admoin@admin.com
-pass:123456
+<p>email:admoin@admin.com</p>
+<p>pass:123456</p>
 
 
