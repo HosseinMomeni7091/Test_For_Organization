@@ -10,11 +10,10 @@
 
 ## Start with this code
 
-git clone https://github.com/HosseinMomeni7091/Test_For_Organization.git
-npm i 
-php artisan key:generate
-php artisan storage:link
-php artisan migrate --seed
+#npm i 
+#php artisan key:generate
+#php artisan storage:link
+#php artisan migrate --seed
 
 ## About this code
 
